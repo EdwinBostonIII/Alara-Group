@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Alara Group Ltd</title>
+    <meta name="description" content="Get in touch with Alara Group to discuss how AI can transform your organization. Schedule a consultation today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            200: '#bcccdc',
+                            300: '#9fb3c8',
+                            400: '#829ab1',
+                            500: '#627d98',
+                            600: '#486581',
+                            700: '#334e68',
+                            800: '#243b53',
+                            900: '#102a43',
+                            950: '#0a1929'
+                        },
+                        gold: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f'
+                        },
+                        warm: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Inter', 'sans-serif'],
+                        body: ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-body text-navy-800 bg-warm-50">
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-sm fixed w-full z-50 border-b border-navy-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="font-heading text-2xl font-bold text-navy-900">
+                        Alara<span class="text-gold-600">Group</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-navy-600 hover:text-gold-600 transition-colors">Home</a>
+                    <a href="about.html" class="text-navy-600 hover:text-gold-600 transition-colors">About Us</a>
+                    <a href="services.html" class="text-navy-600 hover:text-gold-600 transition-colors">Services</a>
+                    <a href="markets.html" class="text-navy-600 hover:text-gold-600 transition-colors">Markets</a>
+                    <a href="blog.html" class="text-navy-600 hover:text-gold-600 transition-colors">Insights</a>
+                    <a href="contact.html" class="bg-gradient-to-r from-gold-500 to-gold-600 text-white px-6 py-2.5 rounded-full font-medium hover:from-gold-600 hover:to-gold-700 transition-all shadow-lg shadow-gold-500/25">
+                        Contact Us
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="text-navy-600 hover:text-gold-600" aria-label="Toggle menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="text-navy-600 hover:text-gold-600">Home</a>
+                    <a href="about.html" class="text-navy-600 hover:text-gold-600">About Us</a>
+                    <a href="services.html" class="text-navy-600 hover:text-gold-600">Services</a>
+                    <a href="markets.html" class="text-navy-600 hover:text-gold-600">Markets</a>
+                    <a href="blog.html" class="text-navy-600 hover:text-gold-600">Insights</a>
+                    <a href="contact.html" class="bg-gradient-to-r from-gold-500 to-gold-600 text-white px-6 py-2.5 rounded-full font-medium text-center">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
+                    Let's Start a Conversation
+                </h1>
+                <p class="text-xl text-navy-200 max-w-2xl mx-auto">
+                    Ready to explore how AI can transform your organization? We would love to hear from you.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="font-heading text-2xl font-bold text-navy-900 mb-6">Send Us a Message</h2>
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-navy-700 mb-2">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required
+                                    class="w-full px-4 py-3 rounded-xl border border-navy-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-navy-700 mb-2">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required
+                                    class="w-full px-4 py-3 rounded-xl border border-navy-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-navy-700 mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 rounded-xl border border-navy-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-navy-700 mb-2">Company</label>
+                            <input type="text" id="company" name="company"
+                                class="w-full px-4 py-3 rounded-xl border border-navy-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-navy-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full px-4 py-3 rounded-xl border border-navy-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all">
+                        </div>
+                        <div>
+                            <label for="interest" class="block text-sm font-medium text-navy-700 mb-2">What are you interested in?</label>
+                            <select id="interest" name="interest"
+                                class="w-full px-4 py-3 rounded-xl border border-navy-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all bg-white">
+                                <option value="">Select an option</option>
+                                <option value="ai-strategy">AI Strategy Development</option>
+                                <option value="process-optimization">Process Optimization</option>
+                                <option value="training">Training Programs</option>
+                                <option value="risk-assessment">AI Risk Assessment</option>
+                                <option value="implementation">Implementation Support</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-navy-700 mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-3 rounded-xl border border-navy-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 outline-none transition-all resize-none"
+                                placeholder="Tell us about your organization and how we can help..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-gradient-to-r from-gold-500 to-gold-600 text-white px-8 py-4 rounded-full font-heading font-semibold text-lg hover:from-gold-600 hover:to-gold-700 transition-all shadow-lg shadow-gold-500/25">
+                            Send Message
+                        </button>
+                        <p class="text-sm text-navy-500 text-center">
+                            We typically respond within one business day.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <div class="bg-gradient-to-br from-navy-50 to-warm-100 rounded-3xl p-8 lg:p-12 mb-8">
+                        <h2 class="font-heading text-2xl font-bold text-navy-900 mb-6">Get in Touch</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-heading font-semibold text-navy-900">Email</h3>
+                                    <a href="mailto:info@alaragroupltd.com" class="text-gold-600 hover:text-gold-700 transition-colors">
+                                        info@alaragroupltd.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-heading font-semibold text-navy-900">Social</h3>
+                                    <div class="flex space-x-4 mt-2">
+                                        <a href="https://www.linkedin.com/company/alara-group-ltd" target="_blank" rel="noopener noreferrer" class="text-navy-500 hover:text-gold-600 transition-colors" aria-label="LinkedIn">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://www.facebook.com/alaragroupltd" target="_blank" rel="noopener noreferrer" class="text-navy-500 hover:text-gold-600 transition-colors" aria-label="Facebook">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://www.x.com/alaragroupltd" target="_blank" rel="noopener noreferrer" class="text-navy-500 hover:text-gold-600 transition-colors" aria-label="X (Twitter)">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What to Expect -->
+                    <div class="bg-white rounded-3xl p-8 lg:p-12 border border-navy-100 shadow-lg">
+                        <h2 class="font-heading text-2xl font-bold text-navy-900 mb-6">What to Expect</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-gold-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="font-heading font-bold text-gold-600">1</span>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-heading font-semibold text-navy-900">Initial Response</h3>
+                                    <p class="text-navy-600 text-sm mt-1">We will respond to your inquiry within one business day to acknowledge receipt and gather any additional information needed.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-gold-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="font-heading font-bold text-gold-600">2</span>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-heading font-semibold text-navy-900">Discovery Call</h3>
+                                    <p class="text-navy-600 text-sm mt-1">We will schedule a brief call to learn more about your organization, challenges, and goals.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-gold-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="font-heading font-bold text-gold-600">3</span>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-heading font-semibold text-navy-900">Tailored Proposal</h3>
+                                    <p class="text-navy-600 text-sm mt-1">Based on our conversation, we will provide a customized proposal outlining how we can help you achieve your objectives.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-gradient-to-br from-navy-50 to-warm-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl font-bold text-navy-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-navy-600">Quick answers to common questions about working with us.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-navy-100">
+                    <h3 class="font-heading font-semibold text-navy-900 mb-2">What size organizations do you work with?</h3>
+                    <p class="text-navy-600">We work with organizations of all sizes, from growth stage companies to large enterprises. Our approach scales to meet your specific needs and resources.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-navy-100">
+                    <h3 class="font-heading font-semibold text-navy-900 mb-2">Do you offer remote consulting?</h3>
+                    <p class="text-navy-600">Yes, we work with clients globally through a combination of remote and on site engagement, depending on what works best for your organization.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-navy-100">
+                    <h3 class="font-heading font-semibold text-navy-900 mb-2">How long does a typical engagement last?</h3>
+                    <p class="text-navy-600">Engagement length varies based on scope. Strategy projects typically run 4 to 8 weeks, while implementation support can extend to several months or ongoing retainer arrangements.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-navy-100">
+                    <h3 class="font-heading font-semibold text-navy-900 mb-2">What makes Alara Group different?</h3>
+                    <p class="text-navy-600">We combine deep AI expertise with practical business acumen. We focus on delivering measurable results, not theoretical frameworks, and we invest in long term partnerships with our clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-navy-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <a href="index.html" class="font-heading text-2xl font-bold text-white">
+                        Alara<span class="text-gold-500">Group</span>
+                    </a>
+                    <p class="mt-4 text-navy-400 max-w-md">
+                        AI powered business consulting for forward thinking organizations. We help you navigate the future with confidence.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="https://www.linkedin.com/company/alara-group-ltd" target="_blank" rel="noopener noreferrer" class="text-navy-400 hover:text-gold-500 transition-colors" aria-label="LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/alaragroupltd" target="_blank" rel="noopener noreferrer" class="text-navy-400 hover:text-gold-500 transition-colors" aria-label="Facebook">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.x.com/alaragroupltd" target="_blank" rel="noopener noreferrer" class="text-navy-400 hover:text-gold-500 transition-colors" aria-label="X (Twitter)">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-gold-500 transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-gold-500 transition-colors">Services</a></li>
+                        <li><a href="markets.html" class="hover:text-gold-500 transition-colors">Markets</a></li>
+                        <li><a href="blog.html" class="hover:text-gold-500 transition-colors">Insights</a></li>
+                        <li><a href="contact.html" class="hover:text-gold-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold text-white mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="mailto:info@alaragroupltd.com" class="hover:text-gold-500 transition-colors">
+                                info@alaragroupltd.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-navy-800 mt-12 pt-8 text-center text-navy-500 text-sm">
+                <p>&copy; 2025 Alara Group Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
