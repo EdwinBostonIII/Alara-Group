@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | Alara Group Ltd</title>
+    <meta name="description" content="Practical perspectives on AI strategy, implementation, and what actually works. No hype, just insights from our experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1', 400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#020617' },
+                        ember: { 50: '#fef7ee', 100: '#fdecd3', 200: '#fad5a5', 300: '#f6b76d', 400: '#f19033', 500: '#ed7414', 600: '#de5a0a', 700: '#b8430b', 800: '#933610', 900: '#772f10' },
+                        sage: { 50: '#f6f7f6', 100: '#e3e6e3', 200: '#c6cdc6', 300: '#a1ada1', 400: '#7b8a7b', 500: '#5f6f5f', 600: '#4b594b', 700: '#3e493e', 800: '#343c34', 900: '#2d332d' },
+                        cream: { 50: '#fdfcfa', 100: '#f9f6f0', 200: '#f3ede3' }
+                    },
+                    fontFamily: { display: ['Playfair Display', 'serif'], heading: ['Space Grotesk', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-body text-slate-800 bg-cream-50">
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-sm fixed w-full z-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0"><a href="index.html" class="font-display text-2xl font-bold text-slate-900">Alara<span class="text-ember-500">Group</span></a></div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate-600 hover:text-ember-600 transition-colors">Home</a>
+                    <a href="about.html" class="text-slate-600 hover:text-ember-600 transition-colors">About Us</a>
+                    <a href="services.html" class="text-slate-600 hover:text-ember-600 transition-colors">Services</a>
+                    <a href="markets.html" class="text-slate-600 hover:text-ember-600 transition-colors">Markets</a>
+                    <a href="blog.html" class="text-ember-600 border-b-2 border-ember-500 font-medium pb-1">Insights</a>
+                    <a href="contact.html" class="bg-gradient-to-r from-ember-500 to-ember-600 text-white px-6 py-2.5 rounded-full font-medium hover:from-ember-600 hover:to-ember-700 transition-all shadow-lg shadow-ember-500/25">Contact Us</a>
+                </div>
+                <div class="md:hidden"><button type="button" id="mobile-menu-btn" class="text-slate-600 hover:text-ember-600" aria-label="Toggle menu"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="text-slate-600 hover:text-ember-600">Home</a>
+                    <a href="about.html" class="text-slate-600 hover:text-ember-600">About Us</a>
+                    <a href="services.html" class="text-slate-600 hover:text-ember-600">Services</a>
+                    <a href="markets.html" class="text-slate-600 hover:text-ember-600">Markets</a>
+                    <a href="blog.html" class="text-ember-600 font-medium">Insights</a>
+                    <a href="contact.html" class="bg-gradient-to-r from-ember-500 to-ember-600 text-white px-6 py-2.5 rounded-full font-medium text-center">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-slate-900 via-slate-800 to-sage-900 relative overflow-hidden">
+        <div class="absolute top-20 right-20 w-72 h-72 bg-ember-500/10 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center">
+                <p class="text-ember-400 font-heading font-medium mb-3 tracking-wide uppercase text-sm">From Our Experience</p>
+                <h1 class="font-display text-4xl md:text-5xl font-bold text-white mb-6">
+                    Perspectives on AI<br><span class="text-ember-400">That Cut Through the Noise</span>
+                </h1>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto">
+                    Practical insights on AI strategy, implementation challenges, and what we have learned from working with organizations across industries. No vendor pitches, no hype.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="py-24 bg-white relative">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-ember-500 via-sage-400 to-ember-500"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Featured Post -->
+            <div class="mb-16">
+                <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-sage-900 rounded-3xl overflow-hidden relative">
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23f19033\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+                    <div class="p-10 lg:p-16 relative">
+                        <span class="inline-block bg-ember-500 text-white text-xs font-heading font-semibold px-3 py-1 rounded-full mb-6">Featured</span>
+                        <h2 class="font-display text-3xl lg:text-4xl font-bold text-white mb-4">Why Most AI Strategies Fail Before They Start</h2>
+                        <p class="text-slate-300 text-lg mb-6 max-w-3xl leading-relaxed">
+                            We have seen the same pattern dozens of times: an organization gets excited about AI, launches a big initiative, and then watches it stall. The problem usually is not the technology. It is the approach. Here is what goes wrong and how to avoid it.
+                        </p>
+                        <div class="flex items-center justify-between flex-wrap gap-4">
+                            <div class="flex items-center text-slate-400 text-sm">
+                                <span>By Cindy G. Levitt</span>
+                                <span class="mx-3">•</span>
+                                <span>January 2025</span>
+                                <span class="mx-3">•</span>
+                                <span>12 min read</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center text-ember-400 font-heading font-medium hover:text-ember-300 transition-colors">
+                                Read Article
+                                <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Article 1 -->
+                <article class="bg-white rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="h-48 bg-gradient-to-br from-sage-100 to-sage-200 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%234b594b\" fill-opacity=\"0.1\"%3E%3Cpath d=\"M0 20L20 0v20H0zm20 0L0 40h20V20zm0 0L40 0v20H20zm0 0L40 40H20V20z\"/%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+                        <div class="absolute bottom-4 left-4"><span class="bg-white/90 text-sage-700 text-xs font-heading font-medium px-3 py-1 rounded-full">Strategy</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-ember-600 transition-colors">The "Start Small" Trap and How to Avoid It</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">Everyone says to start small with AI. The problem is that most organizations start so small that they never prove anything meaningful.</p>
+                        <div class="flex items-center justify-between text-sm text-slate-400">
+                            <span>December 2024</span>
+                            <span>8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="bg-white rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="h-48 bg-gradient-to-br from-ember-100 to-ember-200 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%23b8430b\" fill-opacity=\"0.1\"%3E%3Cpath d=\"M0 20L20 0v20H0zm20 0L0 40h20V20zm0 0L40 0v20H20zm0 0L40 40H20V20z\"/%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+                        <div class="absolute bottom-4 left-4"><span class="bg-white/90 text-ember-700 text-xs font-heading font-medium px-3 py-1 rounded-full">Implementation</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-ember-600 transition-colors">What Your AI Vendor Is Not Telling You</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">AI vendors make their products sound turnkey. In reality, implementation is where most of the work happens. Here is what to expect.</p>
+                        <div class="flex items-center justify-between text-sm text-slate-400">
+                            <span>November 2024</span>
+                            <span>10 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="bg-white rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="h-48 bg-gradient-to-br from-slate-100 to-slate-200 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%23334155\" fill-opacity=\"0.1\"%3E%3Cpath d=\"M0 20L20 0v20H0zm20 0L0 40h20V20zm0 0L40 0v20H20zm0 0L40 40H20V20z\"/%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+                        <div class="absolute bottom-4 left-4"><span class="bg-white/90 text-slate-700 text-xs font-heading font-medium px-3 py-1 rounded-full">Leadership</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-ember-600 transition-colors">Getting Your Board to Understand AI (Without Their Eyes Glazing Over)</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">Boards need to understand AI risk and opportunity, but they do not need to understand the technology. Here is how to frame the conversation.</p>
+                        <div class="flex items-center justify-between text-sm text-slate-400">
+                            <span>October 2024</span>
+                            <span>7 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="bg-white rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="h-48 bg-gradient-to-br from-sage-100 to-sage-200 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%234b594b\" fill-opacity=\"0.1\"%3E%3Cpath d=\"M0 20L20 0v20H0zm20 0L0 40h20V20zm0 0L40 0v20H20zm0 0L40 40H20V20z\"/%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+                        <div class="absolute bottom-4 left-4"><span class="bg-white/90 text-sage-700 text-xs font-heading font-medium px-3 py-1 rounded-full">Industry</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-ember-600 transition-colors">AI in Insurance: Beyond the Obvious Use Cases</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">Everyone knows AI can help with claims and underwriting. The interesting opportunities are in places most insurers have not looked yet.</p>
+                        <div class="flex items-center justify-between text-sm text-slate-400">
+                            <span>September 2024</span>
+                            <span>11 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="bg-white rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="h-48 bg-gradient-to-br from-ember-100 to-ember-200 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%23b8430b\" fill-opacity=\"0.1\"%3E%3Cpath d=\"M0 20L20 0v20H0zm20 0L0 40h20V20zm0 0L40 0v20H20zm0 0L40 40H20V20z\"/%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+                        <div class="absolute bottom-4 left-4"><span class="bg-white/90 text-ember-700 text-xs font-heading font-medium px-3 py-1 rounded-full">People</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-ember-600 transition-colors">Building an AI Team When You Cannot Compete on Salary</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">Not everyone can pay tech company salaries. Here is how to attract and retain AI talent when competing against better funded organizations.</p>
+                        <div class="flex items-center justify-between text-sm text-slate-400">
+                            <span>August 2024</span>
+                            <span>9 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="bg-white rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="h-48 bg-gradient-to-br from-slate-100 to-slate-200 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%23334155\" fill-opacity=\"0.1\"%3E%3Cpath d=\"M0 20L20 0v20H0zm20 0L0 40h20V20zm0 0L40 0v20H20zm0 0L40 40H20V20z\"/%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+                        <div class="absolute bottom-4 left-4"><span class="bg-white/90 text-slate-700 text-xs font-heading font-medium px-3 py-1 rounded-full">Data</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-ember-600 transition-colors">Your Data Is Not as Ready as You Think</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">Most AI projects stall on data issues. The data you have is rarely the data you need. Here is how to close the gap without a multi year initiative.</p>
+                        <div class="flex items-center justify-between text-sm text-slate-400">
+                            <span>July 2024</span>
+                            <span>8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="mt-16 bg-gradient-to-br from-cream-100 to-cream-50 rounded-3xl p-10 lg:p-16 border border-slate-100">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h3 class="font-display text-2xl font-bold text-slate-900 mb-4">Get Our Latest Thinking</h3>
+                    <p class="text-slate-600 mb-6">Join our mailing list for occasional insights on AI strategy. We only write when we have something worth saying.</p>
+                    <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-full border border-slate-200 focus:outline-none focus:ring-2 focus:ring-ember-500 focus:border-transparent">
+                        <button type="submit" class="bg-gradient-to-r from-ember-500 to-ember-600 text-white px-6 py-3 rounded-full font-heading font-medium hover:from-ember-600 hover:to-ember-700 transition-all shadow-lg shadow-ember-500/25">Subscribe</button>
+                    </form>
+                    <p class="text-xs text-slate-400 mt-4">No spam. Unsubscribe anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <a href="index.html" class="font-display text-2xl font-bold text-white">Alara<span class="text-ember-500">Group</span></a>
+                    <p class="mt-4 text-slate-500 max-w-md leading-relaxed">We help organizations cut through the AI noise and find strategies that actually work. No hype, no jargon, just results you can measure.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="https://www.linkedin.com/company/alara-group-ltd" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-ember-500 transition-colors" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                        <a href="https://www.facebook.com/alaragroupltd" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-ember-500 transition-colors" aria-label="Facebook"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="https://www.x.com/alaragroupltd" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-ember-500 transition-colors" aria-label="X"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-ember-500 transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-ember-500 transition-colors">Services</a></li>
+                        <li><a href="markets.html" class="hover:text-ember-500 transition-colors">Markets</a></li>
+                        <li><a href="blog.html" class="hover:text-ember-500 transition-colors">Insights</a></li>
+                        <li><a href="contact.html" class="hover:text-ember-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold text-white mb-4">Get in Touch</h4>
+                    <ul class="space-y-2"><li><a href="mailto:info@alaragroupltd.com" class="hover:text-ember-500 transition-colors">info@alaragroupltd.com</a></li></ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-12 pt-8 text-center text-slate-600 text-sm"><p>&copy; 2025 Alara Group Ltd. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <script>const mobileMenuBtn=document.getElementById('mobile-menu-btn'),mobileMenu=document.getElementById('mobile-menu');mobileMenuBtn.addEventListener('click',()=>{mobileMenu.classList.toggle('hidden');});</script>
+</body>
+</html>

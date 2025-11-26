@@ -2,6 +2,21 @@
 /* Most styling is handled by Tailwind CSS via CDN */
 /* This file contains additional custom styles and overrides */
 
+/* ================================================
+   DESIGN SYSTEM
+   ================================================
+   Fonts:
+   - Display: Playfair Display (serif, elegant headings)
+   - Heading: Space Grotesk (modern, technical subheadings)
+   - Body: Plus Jakarta Sans (clean, readable body text)
+   
+   Colors:
+   - Slate: Primary dark tones (#0f172a to #f8fafc)
+   - Ember: Warm accent/CTA (#ed7414 and variants)
+   - Sage: Muted green accent (#5f6f5f and variants)
+   - Cream: Warm backgrounds (#fdfcfa to #f3ede3)
+   ================================================ */
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
@@ -9,7 +24,7 @@ html {
 
 /* Custom focus states for accessibility */
 *:focus-visible {
-    outline: 2px solid #f59e0b;
+    outline: 2px solid #ed7414;
     outline-offset: 2px;
 }
 
@@ -17,7 +32,7 @@ html {
 input:focus,
 textarea:focus,
 select:focus {
-    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+    box-shadow: 0 0 0 3px rgba(237, 116, 20, 0.15);
 }
 
 /* Button hover lift effect */
@@ -39,22 +54,48 @@ select {
     transition: all 0.2s ease-in-out;
 }
 
+/* Custom selection color */
+::selection {
+    background-color: rgba(237, 116, 20, 0.2);
+    color: #0f172a;
+}
+
 /* Custom scrollbar for webkit browsers */
 ::-webkit-scrollbar {
     width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f0f4f8;
+    background: #f9f6f0;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #829ab1;
+    background: #94a3b8;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #627d98;
+    background: #64748b;
+}
+
+/* Typography enhancements */
+.font-display {
+    font-feature-settings: "liga" 1, "kern" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-heading {
+    font-feature-settings: "ss01" 1;
+    letter-spacing: -0.01em;
+}
+
+/* Gradient text utility */
+.text-gradient {
+    background: linear-gradient(135deg, #ed7414, #de5a0a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* Print styles */
@@ -67,10 +108,16 @@ select {
     
     body {
         font-size: 12pt;
+        color: #000;
+        background: #fff;
     }
     
     a[href]:after {
         content: " (" attr(href) ")";
+    }
+    
+    h1, h2, h3 {
+        color: #0f172a;
     }
 }
 
@@ -88,11 +135,16 @@ select {
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
-    .border-navy-100 {
-        border-color: #102a43;
+    .border-slate-100 {
+        border-color: #0f172a;
     }
     
-    .text-navy-600 {
-        color: #102a43;
+    .text-slate-600 {
+        color: #0f172a;
+    }
+    
+    .text-ember-500,
+    .text-ember-600 {
+        color: #b8430b;
     }
 }
