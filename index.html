@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alara Group Ltd: AI-powered strategies, tailored insight, and real growth for ambitious businesses. We combine AI tools, strategic consultancy, and digital outreach to achieve measurable results.">
+    <meta name="keywords" content="AI consulting, business growth, strategic consultancy, digital outreach, lead generation, CRM integration, sales funnel optimization">
+    <meta property="og:title" content="Alara Group Ltd | Empowering Growth with Intelligent Insight">
+    <meta property="og:description" content="AI-powered strategies. Tailored insight. Real growth.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alaragroupltd.com">
+    <title>Alara Group Ltd | Empowering Growth with Intelligent Insight</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            200: '#bcccdc',
+                            300: '#9fb3c8',
+                            400: '#829ab1',
+                            500: '#627d98',
+                            600: '#486581',
+                            700: '#334e68',
+                            800: '#243b53',
+                            900: '#102a43',
+                            950: '#0a1929',
+                        },
+                        'gold': {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        },
+                        'warm': {
+                            50: '#fdfcfb',
+                            100: '#f9f6f3',
+                            200: '#f3ede7',
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Inter', 'sans-serif'],
+                        'body': ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body text-navy-800 bg-warm-50">
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-navy-700 to-navy-900 rounded-lg flex items-center justify-center">
+                            <span class="text-gold-400 font-heading font-bold text-xl">A</span>
+                        </div>
+                        <span class="font-heading font-semibold text-xl text-navy-900">Alara Group</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="font-medium text-gold-600 border-b-2 border-gold-500 pb-1">Home</a>
+                    <a href="about.html" class="font-medium text-navy-600 hover:text-gold-600 transition-colors">About Us</a>
+                    <a href="services.html" class="font-medium text-navy-600 hover:text-gold-600 transition-colors">Services</a>
+                    <a href="markets.html" class="font-medium text-navy-600 hover:text-gold-600 transition-colors">Markets</a>
+                    <a href="blog.html" class="font-medium text-navy-600 hover:text-gold-600 transition-colors">Insights</a>
+                    <a href="contact.html" class="bg-gradient-to-r from-gold-500 to-gold-600 text-white px-6 py-2.5 rounded-full font-semibold hover:from-gold-600 hover:to-gold-700 transition-all shadow-lg shadow-gold-500/25">Contact Us</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-navy-700 hover:text-gold-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block font-medium text-gold-600">Home</a>
+                <a href="about.html" class="block font-medium text-navy-600">About Us</a>
+                <a href="services.html" class="block font-medium text-navy-600">Services</a>
+                <a href="markets.html" class="block font-medium text-navy-600">Markets</a>
+                <a href="blog.html" class="block font-medium text-navy-600">Insights</a>
+                <a href="contact.html" class="block bg-gold-500 text-white px-4 py-2 rounded-full font-semibold text-center">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Background gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-950"></div>
+        
+        <!-- Decorative elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gold-400/10 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-navy-400/20 rounded-full blur-2xl"></div>
+        </div>
+
+        <!-- Grid pattern overlay -->
+        <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <div class="inline-flex items-center px-4 py-2 bg-gold-500/20 rounded-full mb-6">
+                        <span class="w-2 h-2 bg-gold-400 rounded-full mr-2 animate-pulse"></span>
+                        <span class="text-gold-300 text-sm font-medium">Your Strategic Growth Partner</span>
+                    </div>
+                    
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        Empowering Growth with
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-300"> Intelligent Insight</span>
+                    </h1>
+                    
+                    <p class="text-xl sm:text-2xl text-navy-200 mb-4 font-light">
+                        AI powered strategies. Tailored insight. Real growth.
+                    </p>
+                    
+                    <p class="text-lg text-navy-300 mb-8 max-w-xl mx-auto lg:mx-0">
+                        We combine cutting edge AI tools, strategic consultancy, and digital outreach to help ambitious businesses achieve measurable growth in reach and revenue.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="contact.html" class="bg-gradient-to-r from-gold-500 to-gold-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-gold-600 hover:to-gold-700 transition-all shadow-xl shadow-gold-500/30 hover:shadow-gold-500/40 hover:-translate-y-0.5">
+                            Start Your Growth Journey
+                        </a>
+                        <a href="about.html" class="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all">
+                            Learn About Us
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hidden lg:block relative">
+                    <div class="relative z-10">
+                        <!-- Abstract AI visualization -->
+                        <div class="bg-gradient-to-br from-navy-700/50 to-navy-800/50 backdrop-blur-xl rounded-3xl p-8 border border-white/10 shadow-2xl">
+                            <div class="grid grid-cols-3 gap-4 mb-6">
+                                <div class="bg-gradient-to-br from-gold-500/20 to-gold-600/10 rounded-2xl p-4 text-center">
+                                    <div class="text-3xl font-bold text-gold-400 font-heading">AI</div>
+                                    <div class="text-sm text-navy-300">Powered</div>
+                                </div>
+                                <div class="bg-gradient-to-br from-navy-500/30 to-navy-600/20 rounded-2xl p-4 text-center">
+                                    <div class="text-3xl font-bold text-white font-heading">360°</div>
+                                    <div class="text-sm text-navy-300">Strategy</div>
+                                </div>
+                                <div class="bg-gradient-to-br from-gold-500/20 to-gold-600/10 rounded-2xl p-4 text-center">
+                                    <div class="text-3xl font-bold text-gold-400 font-heading">ROI</div>
+                                    <div class="text-sm text-navy-300">Focused</div>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                                    <div class="flex-1 bg-navy-600/50 rounded-full h-2">
+                                        <div class="bg-gradient-to-r from-gold-400 to-gold-500 h-2 rounded-full w-4/5"></div>
+                                    </div>
+                                    <span class="text-sm text-navy-300">Growth</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                                    <div class="flex-1 bg-navy-600/50 rounded-full h-2">
+                                        <div class="bg-gradient-to-r from-blue-400 to-blue-500 h-2 rounded-full w-3/4"></div>
+                                    </div>
+                                    <span class="text-sm text-navy-300">Efficiency</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+                                    <div class="flex-1 bg-navy-600/50 rounded-full h-2">
+                                        <div class="bg-gradient-to-r from-purple-400 to-purple-500 h-2 rounded-full w-5/6"></div>
+                                    </div>
+                                    <span class="text-sm text-navy-300">Insight</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto">
+                <span class="inline-block px-4 py-1.5 bg-gold-100 text-gold-700 rounded-full text-sm font-semibold mb-6">Our Mission</span>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 mb-8">
+                    We Are Alara Group:<br>
+                    <span class="text-gold-600">Your Growth Partner</span>
+                </h2>
+                <p class="text-xl text-navy-600 leading-relaxed">
+                    We empower businesses by combining AI tools, strategic consultancy, and digital outreach to achieve measurable growth in reach and revenue. Our approach is hands on, collaborative, and always focused on delivering real, tangible results that move the needle for your business.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="py-24 bg-gradient-to-b from-warm-100 to-warm-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 bg-navy-100 text-navy-700 rounded-full text-sm font-semibold mb-6">Our Expertise</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
+                    Intelligent Innovation for Modern Business
+                </h2>
+                <p class="text-lg text-navy-600 max-w-3xl mx-auto">
+                    With a foundation in global industry experience, Alara Group empowers businesses through intelligent innovation. By transforming raw data into strategic action, we help our clients scale faster, adapt smarter, and lead with confidence in an AI first world.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-navy-100 hover:border-gold-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-3">AI Powered Lead Generation</h3>
+                    <p class="text-navy-600">Leverage machine learning and predictive analytics to identify, qualify, and nurture high value leads that convert into lasting customer relationships.</p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-navy-100 hover:border-gold-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-navy-600 to-navy-800 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-3">SEO and AI CRM Integration</h3>
+                    <p class="text-navy-600">Optimize your digital presence while seamlessly integrating intelligent CRM systems that automate workflows and enhance customer intelligence.</p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-navy-100 hover:border-gold-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-3">Sales Funnel Design and Optimization</h3>
+                    <p class="text-navy-600">Build conversion focused sales funnels that guide prospects through every stage of the buyer journey with precision and purpose.</p>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-navy-100 hover:border-gold-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-navy-600 to-navy-800 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-3">Predictive Market and Competitive Analysis</h3>
+                    <p class="text-navy-600">Gain foresight into market trends and competitor movements with AI driven analysis that informs smarter strategic decisions.</p>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-navy-100 hover:border-gold-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-3">Digital and Affiliate Outreach Strategy</h3>
+                    <p class="text-navy-600">Expand your reach through strategic partnerships and digital channels that amplify your brand message to the right audiences.</p>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-navy-100 hover:border-gold-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-navy-600 to-navy-800 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-3">Training and Support</h3>
+                    <p class="text-navy-600">Empower your team with the knowledge and tools they need to sustain growth, with ongoing training and dedicated support at every step.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="services.html" class="inline-flex items-center text-gold-600 font-semibold hover:text-gold-700 transition-colors">
+                    Explore All Services
+                    <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-24 bg-navy-900 relative overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-gold-400/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="inline-block px-4 py-1.5 bg-gold-500/20 text-gold-300 rounded-full text-sm font-semibold mb-6">Why Partner With Us</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mb-6">
+                        We Succeed Through Partnerships
+                    </h2>
+                    <p class="text-lg text-navy-200 mb-8">
+                        We work alongside you to deliver tailored solutions that solve key challenges, create value, and sharpen your competitive edge for sustainable growth. Through innovation, strategic clarity, and hands on support, we empower you to navigate complexity with confidence and momentum.
+                    </p>
+                    <a href="about.html" class="inline-flex items-center bg-gradient-to-r from-gold-500 to-gold-600 text-white px-6 py-3 rounded-full font-semibold hover:from-gold-600 hover:to-gold-700 transition-all">
+                        Meet Our Team
+                        <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                        <div class="text-4xl font-bold text-gold-400 font-heading mb-2">360°</div>
+                        <div class="text-navy-200">Strategic Approach</div>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                        <div class="text-4xl font-bold text-gold-400 font-heading mb-2">AI</div>
+                        <div class="text-navy-200">Driven Solutions</div>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                        <div class="text-4xl font-bold text-gold-400 font-heading mb-2">100%</div>
+                        <div class="text-navy-200">Results Focused</div>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                        <div class="text-4xl font-bold text-gold-400 font-heading mb-2">24/7</div>
+                        <div class="text-navy-200">Partner Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Markets Preview -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 bg-gold-100 text-gold-700 rounded-full text-sm font-semibold mb-6">Our Markets</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
+                    Industries We Serve
+                </h2>
+                <p class="text-lg text-navy-600 max-w-3xl mx-auto">
+                    We serve businesses operating in complex, high value sectors where precision, adaptability, and innovation matter most. Our expertise spans globally regulated and fast evolving industries, giving us the strategic depth to deliver real results, fast.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 p-8 hover:shadow-2xl transition-all duration-300">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl group-hover:bg-gold-500/20 transition-colors"></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3 relative z-10">Insurance and Financial Services</h3>
+                    <p class="text-navy-200 relative z-10">Streamlining lead generation, optimizing pipelines, and enhancing customer intelligence.</p>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 p-8 hover:shadow-2xl transition-all duration-300">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl group-hover:bg-gold-500/20 transition-colors"></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3 relative z-10">STEM and Technology</h3>
+                    <p class="text-navy-200 relative z-10">Supporting scaleups with AI driven outreach, sales automation, and go to market strategy.</p>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 p-8 hover:shadow-2xl transition-all duration-300">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl group-hover:bg-gold-500/20 transition-colors"></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3 relative z-10">Defense and Security</h3>
+                    <p class="text-navy-200 relative z-10">Delivering smart project management and business development tools in high compliance environments.</p>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 p-8 hover:shadow-2xl transition-all duration-300">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl group-hover:bg-gold-500/20 transition-colors"></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3 relative z-10">Professional Services</h3>
+                    <p class="text-navy-200 relative z-10">Enabling service led businesses to grow sustainably with intelligent infrastructure.</p>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 p-8 hover:shadow-2xl transition-all duration-300">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl group-hover:bg-gold-500/20 transition-colors"></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3 relative z-10">Health, Wellness, and Lifestyle</h3>
+                    <p class="text-navy-200 relative z-10">Building growth systems that scale customer connection and revenue.</p>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gold-500 to-gold-600 p-8 hover:shadow-2xl transition-all duration-300">
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Ready to Grow?</h3>
+                    <p class="text-gold-100 mb-4">Whether you are breaking into new markets or expanding your impact in existing ones, we equip you to grow with clarity, speed, and confidence.</p>
+                    <a href="markets.html" class="inline-flex items-center text-white font-semibold">
+                        Explore Markets
+                        <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-br from-navy-800 to-navy-900 relative overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-6xl">
+                <div class="absolute top-0 left-1/4 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-gold-400/5 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Ready to Turn Insight Into Impact?
+            </h2>
+            <p class="text-xl text-navy-200 mb-10 max-w-2xl mx-auto">
+                Let us build your next growth strategy: smarter, faster, and with confidence. Growth is not guesswork. It is strategy, insight, and action.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-gradient-to-r from-gold-500 to-gold-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-gold-600 hover:to-gold-700 transition-all shadow-xl shadow-gold-500/30">
+                    Start a Conversation
+                </a>
+                <a href="about.html" class="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all">
+                    Meet the Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-gold-400 to-gold-600 rounded-lg flex items-center justify-center">
+                            <span class="text-navy-900 font-heading font-bold text-xl">A</span>
+                        </div>
+                        <span class="font-heading font-semibold text-xl">Alara Group Ltd</span>
+                    </div>
+                    <p class="text-navy-300 mb-6 max-w-md">
+                        Empowering businesses with AI powered strategies, tailored insight, and measurable growth. Your success is our mission.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/alara-group-ltd" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-navy-800 hover:bg-gold-600 rounded-lg flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/alaragroupltd" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-navy-800 hover:bg-gold-600 rounded-lg flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.x.com/alaragroupltd" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-navy-800 hover:bg-gold-600 rounded-lg flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-navy-300 hover:text-gold-400 transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-navy-300 hover:text-gold-400 transition-colors">Services</a></li>
+                        <li><a href="markets.html" class="text-navy-300 hover:text-gold-400 transition-colors">Markets</a></li>
+                        <li><a href="blog.html" class="text-navy-300 hover:text-gold-400 transition-colors">Insights</a></li>
+                        <li><a href="contact.html" class="text-navy-300 hover:text-gold-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-6">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <a href="mailto:info@alaragroupltd.com" class="text-navy-300 hover:text-gold-400 transition-colors">info@alaragroupltd.com</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <span class="text-navy-300">(751) 385-6232</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-navy-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-navy-400 text-sm">
+                    &copy; 2025 Alara Group Ltd. All Rights Reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-navy-400 hover:text-gold-400 text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-navy-400 hover:text-gold-400 text-sm transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
