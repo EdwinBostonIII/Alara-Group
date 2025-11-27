@@ -7,5 +7,9 @@
     "python.analysis.typeEvaluation.enableExperimentalFeatures": true,
     "workbench.experimental.share.enabled": true,
     "workbench.commandPalette.experimental.suggestCommands": true,
-    "editor.experimentalGpuAcceleration": "on"
+    "editor.experimentalGpuAcceleration": "on",
+    "terminal.integrated.windowsUseConptyDll": true,
+    "githubPullRequests.experimental.useQuickChat": true,
+    "githubPullRequests.experimental.notificationsMarkPullRequests": "markAsDone",
+    "workbench.experimental.cloudChanges.autoStore": "onShutdown"
 }
