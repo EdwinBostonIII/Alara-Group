@@ -3,7 +3,7 @@
 **Phase:** Strategic Transformation
 **Goal:** Redesign core business processes using AI as an enabler (not just automation of broken processes)
 **Duration:** 3-12 months depending on process complexity
-**Key Principle:** "Don't pave the cow path." – Don't automate bad processes. Reimagine them.
+**Key Principle:** "Do not pave the cow path." Do not automate bad processes. Reimagine them.
 
 ---
 

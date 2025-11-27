@@ -1,21 +1,23 @@
 # Alara Group Website Guide
 
-This comprehensive guide covers everything you need to use, maintain, edit, and deploy the Alara Group website. Whether you are updating content, adding new pages, or troubleshooting issues, this guide has you covered.
+This comprehensive guide covers everything you need to edit, maintain, and update the Alara Group website. Whether you want to change some text, add a new article, or understand how things work, this guide has you covered.
+
+If you are completely new to this project, we recommend reading `GETTING-STARTED.md` first for the basic setup instructions.
 
 ---
 
 ## Table of Contents
 
 1. [Understanding Your Website](#understanding-your-website)
-2. [Using the Website](#using-the-website)
-3. [Quick Start for Editors](#quick-start-for-editors)
-4. [File Structure](#file-structure)
-5. [Editing Content](#editing-content)
-6. [Design System Reference](#design-system-reference)
-7. [Page by Page Guide](#page-by-page-guide)
-8. [Adding New Content](#adding-new-content)
-9. [Contact Form Setup](#contact-form-setup)
-10. [Deployment](#deployment)
+2. [Website Navigation](#website-navigation)
+3. [Quick Editing Guide](#quick-editing-guide)
+4. [Editing Content](#editing-content)
+5. [Design System Reference](#design-system-reference)
+6. [Page Guides](#page-guides)
+7. [Adding New Content](#adding-new-content)
+8. [Contact Form](#contact-form)
+9. [Analytics Setup](#analytics-setup)
+10. [Publishing Changes](#publishing-changes)
 11. [Troubleshooting](#troubleshooting)
 12. [Quick Reference](#quick-reference)
 
@@ -23,34 +25,34 @@ This comprehensive guide covers everything you need to use, maintain, edit, and 
 
 ## Understanding Your Website
 
-### What You Have
+### What Your Website Is Made Of
 
-The Alara Group website is a modern, professional marketing site built with:
+Your website uses simple, reliable technology:
 
-- **HTML5**: The structure and content of each page
-- **Tailwind CSS**: A utility framework that handles all styling
-- **Formspree**: A service that processes contact form submissions
-- **Cloudflare Pages**: Hosting that deploys automatically from GitHub
+- **HTML5**: The structure and content of each page (you will edit these files)
+- **Tailwind CSS**: A styling system that makes everything look polished
+- **Formspree**: A service that handles contact form submissions
+- **Cloudflare Pages**: Free hosting that makes your site fast and secure
 
-### Why This Approach
+### Why We Chose This Setup
 
-This setup was chosen because:
+This approach has several advantages:
 
-1. **No maintenance burden**: No databases, no server updates, no security patches
-2. **Fast loading**: Static HTML loads instantly anywhere in the world
-3. **Easy editing**: Content is in plain HTML files you can edit directly
-4. **Automatic deployment**: Push changes to GitHub and they go live automatically
-5. **No recurring costs**: Cloudflare Pages free tier handles typical business traffic
+1. **No ongoing maintenance**: There are no databases to update or security patches to install
+2. **Fast loading**: Static HTML loads instantly for visitors anywhere in the world
+3. **Easy editing**: Content lives in plain text files you can edit directly
+4. **Automatic publishing**: Push changes to GitHub and they go live automatically
+5. **No monthly costs**: Cloudflare Pages handles typical business traffic for free
 
-### What You Can Change Yourself
+### What You Can Edit Yourself
 
 - All text content on every page
-- Contact information and social links
-- Adding new blog posts or insight articles
-- Basic layout changes within existing patterns
-- Adding new pages using existing templates
+- Contact information and social media links
+- Blog posts and insight articles
+- Basic layout changes using existing patterns
+- New pages using existing templates as a starting point
 
-### What Requires Developer Help
+### When You Might Need Help
 
 - Major design changes or new visual styles
 - New interactive features or functionality
@@ -59,172 +61,137 @@ This setup was chosen because:
 
 ---
 
-## Using the Website
+## Website Navigation
 
-### Navigation
+Your website has six main pages:
 
-The website has six main pages, accessible from the navigation bar:
-
-| Page | URL | Purpose |
-|------|-----|---------|
-| Home | `index.html` | First impression, overview of capabilities |
-| About Us | `about.html` | Team bios, company story, approach |
-| Services | `services.html` | Detailed service offerings |
-| Markets | `markets.html` | Industries served with specific expertise |
+| Page | File | Purpose |
+|------|------|---------|
+| Home | `index.html` | First impression, value proposition, overview |
+| About Us | `about.html` | Your story, team bios, approach |
+| Services | `services.html` | What you offer and how you work |
+| Markets | `markets.html` | Industries you serve with specific expertise |
 | Insights | `blog.html` | Thought leadership articles |
 | Contact | `contact.html` | Contact form and information |
 
 ### Mobile Experience
 
-The site is fully responsive. On mobile devices:
-- The navigation collapses into a hamburger menu (three lines)
-- Tap the menu icon to show/hide navigation links
-- All content adapts to smaller screens automatically
+The website automatically adapts to phones and tablets:
+
+- Navigation collapses into a menu icon (three horizontal lines)
+- Tapping the icon shows or hides the navigation links
+- All content adjusts to fit smaller screens
 
 ### Contact Form
 
-When visitors submit the contact form:
-1. Their information goes to Formspree
-2. You receive an email notification (configure in Formspree dashboard)
+When a visitor submits the contact form:
+
+1. Their information is sent to Formspree
+2. You receive an email notification
 3. Submissions are stored in your Formspree account for reference
 
 ---
 
-## Quick Start for Editors
+## Quick Editing Guide
 
-### Preview Changes Locally
+### Previewing Changes Locally
 
-Before pushing changes live, preview them on your computer:
+Before publishing changes, preview them on your computer:
 
-**Option 1: Using Node.js (Recommended)**
+**Using the Live Server Extension (Recommended)**
+
+1. Install the "Live Server" extension in VS Code (one time setup)
+2. Right click any HTML file in the sidebar
+3. Select "Open with Live Server"
+4. Your browser will open showing your site
+5. Changes you save will automatically appear in the preview
+
+**Using a Command Line Server**
+
+Open a terminal in VS Code and run:
+
 ```powershell
-# Navigate to the project folder
-cd "C:\path\to\Alara-Group"
-
-# Start a local server
 npx serve .
 ```
-Open your browser to `http://localhost:3000`
 
-**Option 2: Using Python**
-```powershell
-cd "C:\path\to\Alara-Group"
-python -m http.server 8000
-```
-Open your browser to `http://localhost:8000`
+Then open your browser to `http://localhost:3000`
 
-**Option 3: Using VS Code Live Server Extension**
-1. Install the "Live Server" extension in VS Code
-2. Right click any HTML file
-3. Select "Open with Live Server"
+### Making a Simple Text Change
 
-### Make a Simple Text Change
+1. Open the HTML file you want to edit
+2. Press `Ctrl+F` to search for the text you want to change
+3. Edit the text directly (leave HTML tags like `<p>` and `</p>` intact)
+4. Press `Ctrl+S` to save
+5. Preview to verify your change looks correct
 
-1. Open the HTML file in any text editor (VS Code recommended)
-2. Find the text using `Ctrl+F` (search)
-3. Edit the text directly
-4. Save the file (`Ctrl+S`)
-5. Refresh your local preview to verify
-6. Commit and push to deploy (see [Deployment](#deployment))
+### Publishing Your Changes
 
-### Deploy Your Changes
+After saving your edits, run these three commands in the terminal:
 
 ```powershell
-# Stage all changes
 git add .
-
-# Commit with a message describing what you changed
-git commit -m "Updated homepage hero text"
-
-# Push to GitHub (triggers automatic deployment)
+git commit -m "Brief description of what you changed"
 git push
 ```
 
----
-
-## File Structure
-
-```
-Alara-Group/
-├── index.html              # Homepage
-├── about.html              # About Us page
-├── services.html           # Services page
-├── markets.html            # Markets/Industries page
-├── blog.html               # Insights/Blog listing page
-├── contact.html            # Contact page with form
-├── css/
-│   └── styles.css          # Custom CSS styles
-├── images/                 # Image files (create when needed)
-├── WEBSITE-GUIDE.md        # This guide
-├── SOCIAL-MEDIA-GUIDE.md   # Social media setup guide
-└── README.md               # Project overview
-```
-
-### What Each File Does
-
-**HTML Pages**
-- Each `.html` file is a complete page
-- They all share the same navigation and footer
-- Content is directly in the HTML (no separate content files)
-
-**CSS Styles**
-- `css/styles.css` contains custom styles beyond Tailwind
-- Most styling comes from Tailwind CSS classes in the HTML
-- Edit this file for site wide style changes
+Your changes will be live within one to two minutes.
 
 ---
 
 ## Editing Content
 
-### Content Guidelines
+### Writing Style Guidelines
 
-**Writing Style**
-- Professional yet welcoming tone
-- Specific and confident, not generic
-- Avoid em dashes (—) and in text hyphens
-- Use commas or restructure sentences instead
+**Keep the tone professional yet welcoming:**
 
-**Examples**
+- Be specific and confident, not vague or generic
+- Write as if you are speaking to a trusted colleague
+- Use plain language; explain technical terms if you must use them
 
-Instead of: `AI-powered solutions that transform your business`  
+**Avoid em dashes and complex hyphens:**
+
+Instead of: `AI-powered solutions that transform your business`
 Write: `AI solutions that transform your business`
 
-Instead of: `We offer end-to-end services — from strategy to implementation`  
+Instead of: `We offer end-to-end services — from strategy to implementation`
 Write: `We offer comprehensive services, from strategy to implementation`
 
 ### Editing Text
 
-1. Open the HTML file
-2. Find the text you want to change (use `Ctrl+F` to search)
+Find the HTML file you want to change and locate the text:
+
+1. Open the file in VS Code
+2. Use `Ctrl+F` to search for specific words
 3. Edit the text between the HTML tags
-4. Save and preview
+4. Save the file
 
 **Example:**
-```html
-<!-- Find this -->
-<h1 class="font-display text-4xl">Old Headline</h1>
 
-<!-- Change to -->
-<h1 class="font-display text-4xl">New Headline</h1>
+```html
+<!-- Before -->
+<h1 class="font-display text-4xl">Original Headline</h1>
+
+<!-- After -->
+<h1 class="font-display text-4xl">Your New Headline</h1>
 ```
 
 ### Editing Links
 
-To change where a link goes:
+To change where a link points:
+
 ```html
 <!-- Find the href attribute -->
-<a href="old-url.html" class="...">Link Text</a>
+<a href="old-page.html" class="...">Link Text</a>
 
 <!-- Change the href value -->
-<a href="new-url.html" class="...">Link Text</a>
+<a href="new-page.html" class="...">Link Text</a>
 ```
 
 ### Adding Images
 
-1. Create an `images` folder if it does not exist
-2. Add your image file (use `.jpg`, `.png`, or `.webp`)
-3. Use descriptive filenames: `team-photo.jpg` not `IMG_1234.jpg`
-4. Add the image in HTML:
+1. Create an `images` folder in your project (if it does not exist)
+2. Add your image file using a descriptive name like `team-photo.jpg`
+3. Add the image in HTML:
 
 ```html
 <img 
@@ -234,25 +201,23 @@ To change where a link goes:
 >
 ```
 
-**Image Best Practices:**
-- Optimize images before uploading (compress them)
-- Keep file sizes under 500KB when possible
+**Image Tips:**
+
+- Compress images before uploading to keep file sizes small (under 500KB is ideal)
 - Use descriptive alt text for accessibility
-- Match aspect ratios of existing placeholder images
+- Match the aspect ratios of existing placeholder images when replacing them
 
 ### Updating Social Links
 
-Social links appear in the footer of every page. To update:
+Social links appear in the footer of every page. To update them:
 
 1. Open each HTML file
-2. Find the social media section (near the bottom)
-3. Update the `href` value with your actual profile URLs
+2. Search for the social media section (near the bottom)
+3. Update the `href` values with your actual profile URLs
+4. Save all files and publish
 
-```html
-<a href="https://www.linkedin.com/company/alara-group-ltd" ...>
-```
+**Current Links:**
 
-**Current Placeholders:**
 - LinkedIn: `https://www.linkedin.com/company/alara-group-ltd`
 - Facebook: `https://www.facebook.com/alaragroupltd`
 - X (Twitter): `https://www.x.com/alaragroupltd`
@@ -264,34 +229,36 @@ Social links appear in the footer of every page. To update:
 
 ### Color Palette
 
-The site uses a sophisticated color scheme defined in each HTML file's Tailwind config:
+The site uses a sophisticated color scheme:
 
-| Color Group | CSS Classes | Usage |
-|-------------|-------------|-------|
+| Color Family | CSS Classes | How It Is Used |
+|--------------|-------------|----------------|
 | **Slate** | `slate-50` to `slate-950` | Dark tones for text, headers, backgrounds |
-| **Ember** | `ember-50` to `ember-900` | Warm orange accent for CTAs, highlights |
+| **Ember** | `ember-50` to `ember-900` | Warm orange for buttons, highlights, accents |
 | **Sage** | `sage-50` to `sage-900` | Muted green for subtle accents |
-| **Cream** | `cream-50` to `cream-200` | Warm off white backgrounds |
+| **Cream** | `cream-50` to `cream-200` | Warm off white page backgrounds |
 
-**Key Color Uses:**
-- `slate-900` / `slate-950`: Dark text, dark sections
-- `ember-500` / `ember-600`: Buttons, accent text, highlights
+**Common Color Uses:**
+
+- `slate-900` or `slate-950`: Dark text and dark section backgrounds
+- `ember-500` or `ember-600`: Buttons, accent text, highlighted elements
 - `cream-50`: Main page backgrounds
-- `white`: Cards, form backgrounds
+- `white`: Cards and form backgrounds
 
 ### Typography
 
-Three font families are used:
+Three font families create the visual hierarchy:
 
-| Font | CSS Class | Usage |
-|------|-----------|-------|
+| Font | CSS Class | Where It Is Used |
+|------|-----------|------------------|
 | **Playfair Display** | `font-display` | Large headlines, quotes |
 | **Space Grotesk** | `font-heading` | Subheadings, labels, buttons |
 | **Plus Jakarta Sans** | `font-body` | Body text, descriptions |
 
 ### Common UI Patterns
 
-**Primary Button (CTA)**
+**Primary Button (Call to Action)**
+
 ```html
 <a href="contact.html" class="bg-gradient-to-r from-ember-500 to-ember-600 text-white px-8 py-4 rounded-full font-heading font-semibold text-lg hover:from-ember-600 hover:to-ember-700 transition-all shadow-lg shadow-ember-500/25">
     Button Text
@@ -299,107 +266,153 @@ Three font families are used:
 ```
 
 **Secondary Button**
+
 ```html
 <a href="about.html" class="border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-full font-heading font-medium hover:border-ember-500 hover:text-ember-600 transition-all">
     Button Text
 </a>
 ```
 
-**Card**
+**Content Card**
+
 ```html
 <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
-    <!-- Card content -->
+    <!-- Your card content here -->
 </div>
 ```
 
-**Section with Background**
+**Standard Section**
+
 ```html
 <section class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section content -->
+        <!-- Your section content here -->
     </div>
 </section>
 ```
 
 **Dark Section**
+
 ```html
 <section class="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-sage-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Use text-white and text-slate-300 for text -->
+        <!-- Use text-white and text-slate-300 for text in dark sections -->
     </div>
 </section>
 ```
 
 ---
 
-## Page by Page Guide
+## Page Guides
 
 ### Homepage (index.html)
 
-**Sections:**
-1. Hero: Main headline and intro
-2. Stats: Key numbers/metrics
-3. Mission: What the company does
-4. Expertise: Service categories
-5. CTA: Call to action
+**What It Contains:**
+
+1. Hero section: Main headline, introductory text, and call to action buttons
+2. Stats: Key numbers that demonstrate the AI adoption gap
+3. Mission: Why Alara Group exists and what you stand for
+4. Expertise preview: Overview of your service categories
+5. Call to action: Prompt to get in touch
 
 **Common Edits:**
-- Update hero headline and subtext
-- Change stat numbers and labels
-- Modify mission statement
-- Update expertise descriptions
+
+- Update the hero headline and supporting text
+- Change the statistics (with sources)
+- Modify the mission statement
+- Update the expertise descriptions
 
 ### About Page (about.html)
 
-**Sections:**
-1. Page header: Title and intro
-2. Story: Company background
-3. Team: Founder bios
-4. Approach: How you work
+**What It Contains:**
+
+1. Page header: Title and introduction
+2. Your story: How Alara Group came to be
+3. Team section: Founder bios and backgrounds
+4. Your approach: How you work with clients
 
 **Common Edits:**
+
 - Update founder bios and credentials
-- Refresh company story/history
-- Add team member photos (when available)
+- Refresh the company story
+- Add team photos when available
 
 ### Services Page (services.html)
 
-**Sections:**
-1. Header: Services overview
+**What It Contains:**
+
+1. Header: Overview of your service philosophy
 2. Service cards: Individual service descriptions
-3. CTA: Contact prompt
+3. Call to action: Invitation to discuss needs
 
 **Common Edits:**
+
 - Update service descriptions
 - Add or remove services
-- Modify pricing or engagement info
+- Modify engagement details
 
 ### Markets Page (markets.html)
 
-**Sections:**
-1. Header: Industries intro
-2. Industry blocks: Insurance, Defense, Technology, Healthcare, Professional Services
+**What It Contains:**
+
+1. Header: Your industry expertise introduction
+2. Industry sections: Insurance, Defense, Technology, Healthcare, Professional Services
 
 **Common Edits:**
+
 - Update industry specific expertise
 - Add new industries
-- Modify use cases and applications
+- Modify use cases and examples
 
 ### Insights Page (blog.html)
 
-**Sections:**
-1. Header: Blog intro
-2. Featured article: Highlighted post
-3. Article grid: List of articles
-4. Newsletter signup
+**What It Contains:**
 
-**Adding a New Article:**
-1. Copy an existing article card
-2. Update the title, description, date, and read time
-3. Update the category badge
-4. Add link to full article (when you create one)
+1. Header: Introduction to your thought leadership
+2. Featured article: Highlighted piece
+3. Article grid: List of available articles
+4. Newsletter signup: Email capture (if configured)
+
+### Contact Page (contact.html)
+
+**What It Contains:**
+
+1. Header: Contact introduction
+2. Contact information: Email and social links
+3. Contact form: Submission form
+4. FAQ section: Common questions
+
+---
+
+## Adding New Content
+
+### Adding a New Page
+
+1. Copy an existing page as a template (about.html works well)
+2. Rename the file with a descriptive name like `new-page.html`
+3. Update the page content
+4. Update the navigation in the new page to show the active state:
+
+```html
+<a href="new-page.html" class="text-ember-600 border-b-2 border-ember-500 font-medium pb-1">New Page</a>
+```
+
+5. Add navigation links to ALL other pages:
+
+```html
+<a href="new-page.html" class="text-slate-600 hover:text-ember-600 transition-colors">New Page</a>
+```
+
+### Adding a Blog Article
+
+1. Navigate to the `blog/` folder
+2. Copy an existing article file as a template
+3. Rename it with a descriptive name (use lowercase and hyphens, like `new-article-title.html`)
+4. Update the content, title, meta descriptions, and date
+5. Open `blog.html` and add a card linking to your new article
 
 **Article Card Template:**
+
 ```html
 <article class="bg-white rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
     <div class="h-48 bg-gradient-to-br from-sage-100 to-sage-200 relative overflow-hidden">
@@ -418,53 +431,10 @@ Three font families are used:
 </article>
 ```
 
-### Contact Page (contact.html)
-
-**Sections:**
-1. Header: Contact intro
-2. Contact info: Email, social
-3. Contact form
-4. FAQ section
-
-**Common Edits:**
-- Update contact information
-- Modify form fields
-- Update FAQ questions and answers
-
----
-
-## Adding New Content
-
-### Adding a New Page
-
-1. Copy an existing page as a template (about.html works well)
-2. Rename the file: `new-page.html`
-3. Update the page content
-4. Update the navigation link in the new page:
-
-**Active state (for the new page itself):**
-```html
-<a href="new-page.html" class="text-ember-600 border-b-2 border-ember-500 font-medium pb-1">New Page</a>
-```
-
-5. Add navigation link to ALL other pages:
-```html
-<a href="new-page.html" class="text-slate-600 hover:text-ember-600 transition-colors">New Page</a>
-```
-
-### Adding Individual Blog Articles
-
-For full blog articles:
-
-1. Create a new file: `blog/article-name.html`
-2. Copy the structure from an existing page
-3. Create article content with proper heading hierarchy
-4. Link from the blog listing page
-
 ### Adding Team Photos
 
-1. Save photos at a consistent size (e.g., 400x400 pixels, square)
-2. Place in the `images/` folder
+1. Save photos at a consistent size (400 by 400 pixels works well for headshots)
+2. Place them in the `images/` folder
 3. Update the about.html team section:
 
 ```html
@@ -473,84 +443,30 @@ For full blog articles:
 
 ---
 
-## Contact Form Setup
+## Contact Form
 
 ### Setting Up Formspree
 
-1. **Get Your Form ID**:
-   - Go to [formspree.io](https://formspree.io/) and create a free account.
-   - Click "+ New Form".
-   - Name it "Alara Website Contact".
-   - You will get an endpoint URL like `https://formspree.io/f/xkqjbpqz`.
-   - The last part (`xkqjbpqz`) is your **Form ID**.
-
-2. **Update the Code**:
-   - Open `contact.html`.
-   - Find line ~138: `<form action="https://formspree.io/f/YOUR_FORM_ID" ...>`.
-   - Replace `YOUR_FORM_ID` with your actual ID.
-   - Save and deploy.
+1. Go to formspree.io and create a free account
+2. Click "New Form" and name it "Alara Website Contact"
+3. Copy your Form ID (the code at the end of your endpoint URL)
+4. Open `contact.html` and find the form action attribute
+5. Replace `YOUR_FORM_ID` with your actual Form ID
+6. Save and publish
 
 ### Configuring Email Notifications
 
 In your Formspree dashboard:
-1. Go to your form settings.
-2. Enable email notifications.
-3. Add notification recipients (e.g., `info@alaragroupltd.com`).
-4. (Optional) Customize the notification email template.
 
----
+1. Go to your form settings
+2. Enable email notifications
+3. Add notification recipients (like info@alaragroupltd.com)
+4. Optionally customize the notification email template
 
-## SEO & Analytics Setup
-
-### Search Engine Optimization (SEO)
-
-The site is pre-configured with meta tags for Google, Facebook (Open Graph), and Twitter.
-
-**To optimize further:**
-1. **Images**: Ensure `images/og-image.jpg` exists. This is the image people see when you share the site on LinkedIn. It should be 1200x630 pixels.
-2. **Descriptions**: Edit the `<meta name="description">` tag in each HTML file to match your latest messaging.
-
-### Analytics (Plausible)
-
-We recommend Plausible Analytics because it is privacy-friendly (no cookie banners needed) and simple.
-
-1. Create an account at [plausible.io](https://plausible.io).
-2. Add your domain `alaragroupltd.com`.
-3. You will get a script snippet.
-4. We have already placed a commented-out snippet in the `<head>` of every page.
-5. Uncomment it and ensure the `data-domain` matches yours.
-
-```html
-<!-- Remove the comments (<!-- and -->) around this line in every HTML file -->
-<script defer data-domain="alaragroupltd.com" src="https://plausible.io/js/script.js"></script>
-```
-
----
-
-## Managing the Blog
-
-### Adding a New Post
-
-1. **Create the File**:
-   - Navigate to the `blog/` folder.
-   - Copy `why-most-ai-strategies-fail.html` and rename it (e.g., `new-article.html`).
-
-2. **Update Content**:
-   - Open the new file.
-   - Update the `<title>`, meta description, and OG tags in the `<head>`.
-   - Update the Header section (Title, Date, Read Time).
-   - Write your content in the `<article>` section.
-
-3. **Link it**:
-   - Open `blog.html`.
-   - Copy one of the existing article cards.
-   - Update the link (`href`), title, and summary.
-
----
-
-### Form Fields Explained
+### Form Fields
 
 The current form collects:
+
 - First Name (required)
 - Last Name (required)
 - Email (required)
@@ -559,101 +475,121 @@ The current form collects:
 - Interest area (dropdown)
 - Message (text area)
 
-To add a field:
+---
+
+## Analytics Setup
+
+We recommend Plausible Analytics because it is privacy friendly (no cookie consent banners needed) and easy to understand.
+
+### Setting Up Plausible
+
+1. Create an account at plausible.io
+2. Add your domain: alaragroupltd.com
+3. Copy the script snippet they provide
+4. The HTML files already have a placeholder for this script in the head section
+5. Uncomment the script line and ensure the domain matches:
+
 ```html
-<div>
-    <label for="newField" class="block text-sm font-heading font-medium text-slate-700 mb-2">Field Label</label>
-    <input type="text" id="newField" name="newField" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-ember-500 focus:border-transparent transition-all" placeholder="Placeholder text">
-</div>
+<script defer data-domain="alaragroupltd.com" src="https://plausible.io/js/script.js"></script>
 ```
+
+### Search Engine Optimization
+
+Each page includes meta tags for Google, Facebook, and Twitter sharing:
+
+- Create an image at `images/og-image.jpg` (1200 by 630 pixels) for social sharing
+- Edit the meta description tag in each HTML file to match your current messaging
 
 ---
 
-## Deployment
+## Publishing Changes
 
-### How Deployment Works
+### How Publishing Works
 
-1. You make changes to files locally
-2. You commit and push to GitHub
-3. Cloudflare Pages detects the push
-4. Cloudflare builds and deploys automatically
-5. Changes are live in 1 to 3 minutes
+1. You make changes to files on your computer
+2. You commit and push those changes to GitHub
+3. Cloudflare Pages detects the new changes
+4. Cloudflare automatically updates your live website
+5. Changes appear within one to three minutes
 
-### Deploying Changes
+### Step by Step Publishing
+
+Open a terminal in VS Code and run these commands:
 
 ```powershell
-# Navigate to project
-cd "C:\path\to\Alara-Group"
-
-# Check what changed
+# See what files you changed
 git status
 
-# Stage all changes
+# Stage all your changes
 git add .
 
-# Commit with descriptive message
-git commit -m "Brief description of what changed"
+# Commit with a descriptive message
+git commit -m "Updated homepage headline and services descriptions"
 
-# Push to GitHub
+# Push to GitHub (this triggers the automatic update)
 git push
 ```
 
 ### First Time Cloudflare Setup
 
-1. Go to [Cloudflare Pages](https://pages.cloudflare.com/)
-2. Sign in or create account
-3. Click "Create a project"
-4. Select "Connect to Git"
-5. Authorize GitHub access
-6. Select the Alara-Group repository
-7. Configure build settings:
+If your site is not yet connected to Cloudflare Pages:
+
+1. Go to pages.cloudflare.com and sign in
+2. Click "Create a project"
+3. Select "Connect to Git"
+4. Authorize GitHub access
+5. Select your Alara Group repository
+6. Configure build settings:
    - Framework preset: None
-   - Build command: (leave empty)
+   - Build command: Leave empty
    - Build output directory: `/` or `.`
-8. Click "Save and Deploy"
+7. Click "Save and Deploy"
 
 ### Custom Domain Setup
 
-1. In Cloudflare Pages dashboard, go to your project
+1. In your Cloudflare Pages dashboard, go to your project
 2. Click "Custom domains"
-3. Add your domain (e.g., `alaragroupltd.com`)
-4. Follow DNS instructions (if domain is in Cloudflare, it auto configures)
-5. Wait for SSL certificate (usually 15 minutes)
+3. Add your domain (alaragroupltd.com)
+4. Follow the DNS instructions provided
+5. Wait for the SSL certificate (usually about 15 minutes)
 
 ---
 
 ## Troubleshooting
 
-### Changes Not Appearing
+### Changes Not Appearing on the Live Site
 
 **Check deployment status:**
-1. Go to Cloudflare Pages dashboard
+
+1. Go to your Cloudflare Pages dashboard
 2. Look for recent deployments
-3. Check if deployment succeeded or failed
+3. Check if the deployment succeeded or failed
 
-**Clear browser cache:**
-- Windows: `Ctrl+Shift+R`
-- Mac: `Cmd+Shift+R`
-- Or open in private/incognito window
+**Clear your browser cache:**
 
-**Check you pushed to the right branch:**
+Press `Ctrl+Shift+R` to force a full refresh, or open the site in a private/incognito window.
+
+**Verify you pushed to the correct branch:**
+
 ```powershell
-git branch  # Shows current branch
-git push origin main  # Explicitly push to main
+git branch
+git push origin main
 ```
 
 ### Styling Looks Broken
 
-Check that the Tailwind CDN script is in the `<head>`:
+Make sure the Tailwind script is in the head section of your HTML:
+
 ```html
 <script src="https://cdn.tailwindcss.com"></script>
 ```
 
-Ensure the Tailwind config block follows immediately after.
+The Tailwind configuration block should follow immediately after.
 
 ### Mobile Menu Not Working
 
-Verify this script is at the bottom of your HTML, before `</body>`:
+Verify this script exists at the bottom of your HTML, just before the closing body tag:
+
 ```html
 <script>
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -666,16 +602,16 @@ mobileMenuBtn.addEventListener('click', () => {
 
 ### Form Not Submitting
 
-1. Check the Formspree form ID is correct
+1. Check that the Formspree Form ID is correct
 2. Verify required fields have the `required` attribute
-3. Check browser console for errors (F12 > Console)
+3. Check for errors in the browser console (press F12, then click Console)
 4. Test with a simple submission
 
 ### Images Not Loading
 
-1. Verify the file path is correct (case sensitive)
-2. Check the file exists in the specified location
-3. Ensure file extension matches exactly
+1. Verify the file path is correct (paths are case sensitive)
+2. Check that the file exists in the specified location
+3. Ensure the file extension matches exactly
 
 ---
 
@@ -694,18 +630,19 @@ mobileMenuBtn.addEventListener('click', () => {
 
 ### Color Quick Reference
 
-| Use | Class |
-|-----|-------|
+| Purpose | CSS Class |
+|---------|-----------|
 | Dark background | `bg-slate-900` |
 | Dark text | `text-slate-900` |
-| Accent/CTA | `bg-ember-500` / `text-ember-500` |
+| Accent button | `bg-ember-500` |
+| Accent text | `text-ember-500` |
 | Light background | `bg-cream-50` |
 | White card | `bg-white` |
 
 ### Typography Quick Reference
 
-| Use | Class |
-|-----|-------|
+| Purpose | CSS Classes |
+|---------|-------------|
 | Large headline | `font-display text-4xl font-bold` |
 | Section title | `font-display text-3xl font-bold` |
 | Subheading | `font-heading font-semibold` |
@@ -714,8 +651,8 @@ mobileMenuBtn.addEventListener('click', () => {
 
 ### Spacing Quick Reference
 
-| Use | Class |
-|-----|-------|
+| Purpose | CSS Class |
+|---------|-----------|
 | Section padding | `py-24` |
 | Container width | `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8` |
 | Card padding | `p-8` |
@@ -723,11 +660,13 @@ mobileMenuBtn.addEventListener('click', () => {
 
 ---
 
-## Support
+## Need More Help?
 
-For website questions or issues:
-- Email: info@alaragroupltd.com
+For website questions: info@alaragroupltd.com
 
-For hosting/deployment issues:
-- Cloudflare Status: https://www.cloudflarestatus.com/
-- Cloudflare Support: https://support.cloudflare.com/
+For hosting issues:
+- Cloudflare Status: cloudflarestatus.com
+- Cloudflare Support: support.cloudflare.com
+
+For Formspree issues:
+- Formspree Help: help.formspree.io

@@ -124,7 +124,7 @@ When a call transfers from AI → Human:
 ## 7. The "Gotchas"
 - **Accent Bias**: ASR models perform worse on non-native English speakers. Test extensively with diverse callers.
 - **The "Uncanny Valley"**: If the voice sounds *almost* human but not quite, it creeps people out. Either go fully robotic or hire voice actors to train the TTS.
-- **Background Noise**: Kids screaming, traffic sounds, dogs barking—AI struggles. Use noise cancellation preprocessing.
+- **Background Noise**: Kids screaming, traffic sounds, and dogs barking cause AI to struggle. Use noise cancellation preprocessing.
 - **The "Hold Music" Problem**: If AI puts someone on hold, they assume they're being transferred and hang up.
 
 ## 8. Cost Analysis

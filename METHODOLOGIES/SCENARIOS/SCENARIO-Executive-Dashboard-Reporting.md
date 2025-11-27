@@ -69,7 +69,7 @@ Executives remember stories, not statistics.
 
 **Bad Reporting**: "The AI processed 50,000 claims with 92% accuracy."
 
-**Good Reporting**: "The AI processed a catastrophic hurricane event in 48 hours—a task that previously took our team 3 weeks. We closed claims faster, customers got paid sooner, and our Net Promoter Score hit an all-time high."
+**Good Reporting**: "The AI processed a catastrophic hurricane event in 48 hours. This task previously took our team 3 weeks. We closed claims faster, customers got paid sooner, and our Net Promoter Score hit an all-time high."
 
 ### Phase 4: The Quarterly Business Review Format (Every 90 Days)
 **Structure the meeting**:

@@ -577,7 +577,7 @@ class RevenueProtectionSystem:
 
 ## Conclusion
 
-The utility industry is undergoing its biggest transformation in a century. AI isn't a nice-to-have—it's the only way to manage the complexity of distributed renewables, prosumers, EVs, and aging infrastructure. Utilities that deploy smart grid AI today will be the low-cost, high-reliability providers of tomorrow. Those that don't will struggle with rising costs, deteriorating service, and regulatory penalties.
+The utility industry is undergoing its biggest transformation in a century. AI is not a nice to have. It is the only way to manage the complexity of distributed renewables, prosumers, EVs, and aging infrastructure. Utilities that deploy smart grid AI today will be the low-cost, high-reliability providers of tomorrow. Those that don't will struggle with rising costs, deteriorating service, and regulatory penalties.
 
 **Alara Group delivers**: Proven AI solutions, deep utility domain expertise, and a track record of successful deployments that deliver 100%+ ROI within 24 months.
 
