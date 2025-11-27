@@ -9,6 +9,7 @@ Hello Cindy and David! This folder contains everything you need for your Alara G
 Think of this folder as your digital headquarters. Here is what you will find:
 
 ### Your Website Files
+
 These are the actual pages that visitors see when they go to alaragroupltd.com:
 
 | File | What It Is |
@@ -23,6 +24,7 @@ These are the actual pages that visitors see when they go to alaragroupltd.com:
 | `css/` | A folder with styling code (you likely will not need to touch this) |
 
 ### Your Guide Documents
+
 These help you manage and grow your business:
 
 | Document | What It Covers |
@@ -33,6 +35,7 @@ These help you manage and grow your business:
 | `MARKETING-STRATEGY.md` | Ideas for growing your presence and generating leads |
 
 ### Your Methodology Library
+
 The `METHODOLOGIES/` folder contains your consulting frameworks and playbooks. This is your intellectual property: the processes and approaches that make Alara Group unique.
 
 ---
@@ -40,12 +43,15 @@ The `METHODOLOGIES/` folder contains your consulting frameworks and playbooks. T
 ## Where Should You Start?
 
 **If you are brand new to this project:**
+
 1. Read `GETTING-STARTED.md` first. It walks you through everything step by step.
 
 **If you want to make a quick edit to the website:**
+
 1. Open `WEBSITE-GUIDE.md` and jump to the "Quick Start for Editors" section.
 
 **If you are setting up social media:**
+
 1. Open `SOCIAL-MEDIA-GUIDE.md` and copy the ready made content.
 
 ---
@@ -67,4 +73,4 @@ For anything beyond what the guides cover, you may want to reach out to a web de
 
 ---
 
-*Last updated: November 2025*
+Last updated: November 2025

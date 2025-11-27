@@ -56,6 +56,7 @@ Let us explain this in plain terms, so you know what is happening behind the sce
 Your website is hosted on **Cloudflare Pages**, a service that stores your website files and delivers them to visitors anywhere in the world. When someone types "alaragroupltd.com" into their browser, Cloudflare sends them your website.
 
 **Why this is good for you:**
+
 - It costs $0 per month (Cloudflare's free tier is generous)
 - It is extremely fast (Cloudflare has servers worldwide)
 - It is secure (automatic HTTPS encryption)
@@ -88,7 +89,7 @@ Before you can make changes to your website, you need a few free tools on your c
 
 Visual Studio Code (VS Code) is a free text editor that makes editing website files easy. It is made by Microsoft and used by millions of people.
 
-1. Go to: https://code.visualstudio.com/
+1. Go to <https://code.visualstudio.com/>
 2. Click the big "Download" button
 3. Run the installer and follow the prompts
 4. Accept all the default options
@@ -97,7 +98,7 @@ Visual Studio Code (VS Code) is a free text editor that makes editing website fi
 
 Git is a tool that tracks changes to your files and sends them to GitHub. Think of it as a "save and sync" system.
 
-1. Go to: https://git-scm.com/downloads
+1. Go to <https://git-scm.com/downloads>
 2. Download the version for Windows
 3. Run the installer
 4. **Important:** During installation, when asked about the default editor, choose "Use Visual Studio Code as Git's default editor"
@@ -107,7 +108,7 @@ Git is a tool that tracks changes to your files and sends them to GitHub. Think 
 
 GitHub is where your website files are stored online.
 
-1. If you do not have a GitHub account, create one at: https://github.com/
+1. If you do not have a GitHub account, create one at <https://github.com/>
 2. Use an email address you check regularly (you will get notifications here)
 3. Choose a simple username you will remember
 
@@ -121,7 +122,7 @@ Open VS Code and then open the built in terminal:
 
 Type these commands one at a time, pressing Enter after each. Replace the example information with your own:
 
-```
+```shell
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
@@ -169,12 +170,15 @@ Let us walk through making a simple change to your website. We will change some 
 3. Be careful not to delete any of the code tags (the parts that look like `<p>` or `</h1>`)
 
 **Example:**
+
 If you see this:
+
 ```html
 <h1>Old Headline Text</h1>
 ```
 
 You can change it to:
+
 ```html
 <h1>Your New Headline Text</h1>
 ```
@@ -210,7 +214,7 @@ In VS Code, click "View" then "Terminal" (or press `Ctrl+``)
 
 Type this command and press Enter:
 
-```
+```shell
 git add .
 ```
 
@@ -220,7 +224,7 @@ This tells Git "I want to include all my changes."
 
 Type this command, but replace the message with a description of what you changed:
 
-```
+```shell
 git commit -m "Updated homepage headline"
 ```
 
@@ -230,7 +234,7 @@ The message in quotes helps you remember what each change was for.
 
 Type this command and press Enter:
 
-```
+```shell
 git push
 ```
 
@@ -248,9 +252,9 @@ Your website has a contact form that sends submissions to your email. Here is ho
 
 ### Step 1: Create a Formspree Account
 
-1. Go to: https://formspree.io/
+1. Go to <https://formspree.io/>
 2. Click "Get Started" and create a free account
-3. Use your business email (info@alaragroupltd.com is ideal)
+3. Use your business email (`info@alaragroupltd.com` is ideal)
 
 ### Step 2: Create a New Form
 
@@ -261,7 +265,8 @@ Your website has a contact form that sends submissions to your email. Here is ho
 ### Step 3: Get Your Form ID
 
 After creating the form, you will see an endpoint URL like:
-```
+
+```text
 https://formspree.io/f/xkqjbpqz
 ```
 
@@ -308,7 +313,7 @@ If this feels overwhelming, your domain registrar likely has customer support th
 
 ### If You Need to Buy a Domain
 
-1. Go to a domain registrar like Namecheap (https://www.namecheap.com/) or Google Domains
+1. Go to a domain registrar like [Namecheap](https://www.namecheap.com/) or Google Domains
 2. Search for "alaragroupltd.com"
 3. Purchase it (typically $10 to $15 per year)
 4. Follow the steps above to connect it to Cloudflare Pages
@@ -359,17 +364,20 @@ The `WEBSITE-GUIDE.md` file has a detailed troubleshooting section. Check there 
 
 ### Common Issues and Solutions
 
-**"I made a change but it is not showing on the live site"**
+#### "I made a change but it is not showing on the live site"
+
 - Did you save the file? (Ctrl+S)
 - Did you commit and push? (All three commands: add, commit, push)
 - Wait two minutes; Cloudflare needs time to update
 
-**"I accidentally broke something"**
+#### "I accidentally broke something"
+
 - Git tracks all changes. You can undo mistakes.
 - In VS Code, right click the file and select "Discard Changes" to undo unsaved edits
 - If you already committed, contact your developer for help reverting
 
-**"The website looks strange or broken"**
+#### "The website looks strange or broken"
+
 - You may have accidentally deleted an HTML tag
 - Press `Ctrl+Z` repeatedly to undo recent changes
 - If that does not work, you can restore the file from GitHub
@@ -387,7 +395,7 @@ For these situations, you will want professional help.
 
 ---
 
-## You Are Ready!
+## You Are Ready
 
 You now have everything you need to manage your Alara Group website. Remember:
 

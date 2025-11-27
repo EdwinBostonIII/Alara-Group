@@ -98,7 +98,7 @@ When a visitor submits the contact form:
 
 Before publishing changes, preview them on your computer:
 
-**Using the Live Server Extension (Recommended)**
+#### Using the Live Server Extension (Recommended)
 
 1. Install the "Live Server" extension in VS Code (one time setup)
 2. Right click any HTML file in the sidebar
@@ -106,7 +106,7 @@ Before publishing changes, preview them on your computer:
 4. Your browser will open showing your site
 5. Changes you save will automatically appear in the preview
 
-**Using a Command Line Server**
+#### Using a Command Line Server
 
 Open a terminal in VS Code and run:
 
@@ -257,7 +257,7 @@ Three font families create the visual hierarchy:
 
 ### Common UI Patterns
 
-**Primary Button (Call to Action)**
+#### Primary Button (Call to Action)
 
 ```html
 <a href="contact.html" class="bg-gradient-to-r from-ember-500 to-ember-600 text-white px-8 py-4 rounded-full font-heading font-semibold text-lg hover:from-ember-600 hover:to-ember-700 transition-all shadow-lg shadow-ember-500/25">
@@ -265,7 +265,7 @@ Three font families create the visual hierarchy:
 </a>
 ```
 
-**Secondary Button**
+#### Secondary Button
 
 ```html
 <a href="about.html" class="border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-full font-heading font-medium hover:border-ember-500 hover:text-ember-600 transition-all">
@@ -273,7 +273,7 @@ Three font families create the visual hierarchy:
 </a>
 ```
 
-**Content Card**
+#### Content Card
 
 ```html
 <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
@@ -281,7 +281,7 @@ Three font families create the visual hierarchy:
 </div>
 ```
 
-**Standard Section**
+#### Standard Section
 
 ```html
 <section class="py-24 bg-white">
@@ -291,7 +291,7 @@ Three font families create the visual hierarchy:
 </section>
 ```
 
-**Dark Section**
+#### Dark Section
 
 ```html
 <section class="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-sage-900">
