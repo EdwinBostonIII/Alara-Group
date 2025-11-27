@@ -477,22 +477,76 @@ For full blog articles:
 
 ### Setting Up Formspree
 
-1. Go to [formspree.io](https://formspree.io/) and create an account
-2. Create a new form (free tier allows 50 submissions/month)
-3. Copy your form endpoint (looks like `https://formspree.io/f/abcd1234`)
-4. In `contact.html`, find the form tag and update the action:
+1. **Get Your Form ID**:
+   - Go to [formspree.io](https://formspree.io/) and create a free account.
+   - Click "+ New Form".
+   - Name it "Alara Website Contact".
+   - You will get an endpoint URL like `https://formspree.io/f/xkqjbpqz`.
+   - The last part (`xkqjbpqz`) is your **Form ID**.
 
-```html
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-```
+2. **Update the Code**:
+   - Open `contact.html`.
+   - Find line ~138: `<form action="https://formspree.io/f/YOUR_FORM_ID" ...>`.
+   - Replace `YOUR_FORM_ID` with your actual ID.
+   - Save and deploy.
 
 ### Configuring Email Notifications
 
 In your Formspree dashboard:
-1. Go to your form settings
-2. Enable email notifications
-3. Add notification recipients
-4. Optionally customize the notification email template
+1. Go to your form settings.
+2. Enable email notifications.
+3. Add notification recipients (e.g., `info@alaragroupltd.com`).
+4. (Optional) Customize the notification email template.
+
+---
+
+## SEO & Analytics Setup
+
+### Search Engine Optimization (SEO)
+
+The site is pre-configured with meta tags for Google, Facebook (Open Graph), and Twitter.
+
+**To optimize further:**
+1. **Images**: Ensure `images/og-image.jpg` exists. This is the image people see when you share the site on LinkedIn. It should be 1200x630 pixels.
+2. **Descriptions**: Edit the `<meta name="description">` tag in each HTML file to match your latest messaging.
+
+### Analytics (Plausible)
+
+We recommend Plausible Analytics because it is privacy-friendly (no cookie banners needed) and simple.
+
+1. Create an account at [plausible.io](https://plausible.io).
+2. Add your domain `alaragroupltd.com`.
+3. You will get a script snippet.
+4. We have already placed a commented-out snippet in the `<head>` of every page.
+5. Uncomment it and ensure the `data-domain` matches yours.
+
+```html
+<!-- Remove the comments (<!-- and -->) around this line in every HTML file -->
+<script defer data-domain="alaragroupltd.com" src="https://plausible.io/js/script.js"></script>
+```
+
+---
+
+## Managing the Blog
+
+### Adding a New Post
+
+1. **Create the File**:
+   - Navigate to the `blog/` folder.
+   - Copy `why-most-ai-strategies-fail.html` and rename it (e.g., `new-article.html`).
+
+2. **Update Content**:
+   - Open the new file.
+   - Update the `<title>`, meta description, and OG tags in the `<head>`.
+   - Update the Header section (Title, Date, Read Time).
+   - Write your content in the `<article>` section.
+
+3. **Link it**:
+   - Open `blog.html`.
+   - Copy one of the existing article cards.
+   - Update the link (`href`), title, and summary.
+
+---
 
 ### Form Fields Explained
 
